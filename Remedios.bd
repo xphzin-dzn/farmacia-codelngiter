@@ -1,0 +1,16 @@
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS farmacia_db;
+
+-- Seleciona o banco de dados
+USE farmacia_db;
+
+-- Criação da tabela de remédios
+CREATE TABLE IF NOT EXISTS remedios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    laboratorio VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    quantidade INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
